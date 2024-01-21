@@ -1,5 +1,6 @@
 # EasyPCA
-A tool for running and visualising population genetics PCAs quickly.
+A tool for running and visualising population genetics PCAs quickly. <br />
+Works on both Linux and Windows. Use EasyPCA_lin.c/EasyPCA_lin.exe on Linux and EasyPCA_win.c/EasyPCA_win.exe on Windows. <br />
 
 ## Installation
 
