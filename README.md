@@ -76,5 +76,6 @@ This R code uses various libraries to load and manipulate data, create a PCA sca
 
 *Set the working directory and call EasyPCA.R by running the following:* <br />
 ``` r
+setwd("path/to/plink/directory")
 source("EasyPCA.R")
 ```
