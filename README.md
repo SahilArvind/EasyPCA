@@ -3,7 +3,7 @@ A tool for running and visualising population genetics PCAs quickly.
 
 ## Installation
 
-EasyPCA_win.c/EasyPCA_lin.c, which run the PLINK PCA and prepares the input files for visualisation, is in the C/ directory. The visualisation process has to be done on R, using EasyPCA.R in the R/ directory. For convenience, store both EasyPCA_win.c/EasyPCA_lin.c and EasyPCA.R in your PLINK directory. <br />
+EasyPCA_win.c/EasyPCA_lin.c, which runs the PLINK PCA and prepares the input files for visualisation, is in the C/ directory. The visualisation process has to be done on R, using EasyPCA.R in the R/ directory. For convenience, store both EasyPCA_win.c/EasyPCA_lin.c and EasyPCA.R in your PLINK directory. <br />
 
 On R, install the following libraries: <br />
 ``` r
