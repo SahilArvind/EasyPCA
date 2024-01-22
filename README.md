@@ -1,7 +1,11 @@
 # EasyPCA
 A tool for running and visualising population genetics PCAs quickly. It works on both Linux and Windows. Use EasyPCA_lin.c/EasyPCA_lin.exe on Linux and EasyPCA_win.c/EasyPCA_win.exe on Windows. <br />
 
-## Installation
+### Dependencies
+
+- [Plink 1.90](https://www.cog-genomics.org/plink/) in your path
+
+### Installation
 
 EasyPCA_win.c/EasyPCA_lin.c, which runs the PLINK PCA and prepares the input files for visualisation, is in the C/ directory. The visualisation process has to be done on R, using EasyPCA.R in the R/ directory. For convenience, store both EasyPCA_win.c/EasyPCA_lin.c and EasyPCA.R in your PLINK directory. <br />
 
@@ -16,7 +20,7 @@ install.packages("plotly")
 install.packages("htmlwidgets")
 ```
 
-## Usage
+### Usage
 
 **EasyPCA_win.c/EasyPCA_lin.c**  <br />
 
