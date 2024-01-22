@@ -44,7 +44,7 @@ This C code interacts with PLINK, a genetic analysis tool, to perform Principal 
  - Output Confirmation  <br />
    * Prints a success message upon successful generation of PCA_Data.csv and PCA_Aesthetics.csv.  <br />
 
-*Compile and execute the C program by running the following in the terminal:* <br />
+*Execute the C program by running the following in the terminal (However, you also need to compile the program on Linux):* <br />
 ``` r
 ./EasyPCA_win.exe
 
