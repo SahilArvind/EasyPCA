@@ -3,7 +3,7 @@ A tool for running and visualising population genetics PCAs quickly. It works on
 
 ### Dependencies
 
-- [Plink 1.90](https://www.cog-genomics.org/plink/) in your path
+- [Plink 1.90](https://www.cog-genomics.org/plink/)
 
 ### Installation
 
