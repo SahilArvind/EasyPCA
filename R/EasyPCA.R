@@ -47,8 +47,13 @@ y_axis <- readline(prompt = "Enter the y-axis variable (e.g., PC1, PC2): ")
 # User input for plot title
 plot_title <- readline(prompt = "Enter the title for the PCA plot: ")
 
+# Create ggplot object with "Individual" included in aes
 gg <- ggplot(data = data_combined, 
-             aes(x = !!rlang::sym(x_axis), y = !!rlang::sym(y_axis), colour = Population, shape = Population)) + 
+             aes(x = !!rlang::sym(x_axis), 
+                 y = !!rlang::sym(y_axis), 
+                 colour = Population, 
+                 shape = Population,
+                 text = paste("Population: ", Population, "<br>Individual: ", Individual))) + 
   geom_point() +
   scale_colour_manual(values = list_colour) + 
   scale_shape_manual(values = list_shape) +
@@ -96,6 +101,7 @@ if (save_plot == "yes") {
 if (!is.null(file_format) && save_plot == "yes") {
   if (file_format %in% c("pdf", "png", "html")) {
     if (file_format %in% c("pdf", "png")) {
+      # Saving as pdf/png using ggsave
       ggsave(
         filename = paste0(file_name, ".", file_format),
         plot = gg,
@@ -105,7 +111,8 @@ if (!is.null(file_format) && save_plot == "yes") {
         dpi = 600
       )
     } else if (file_format == "html") {
-      my_widget <- ggplotly(gg)
+      # Saving as html using plotly with hover information
+      my_widget <- ggplotly(gg, tooltip = "text")
       saveWidget(my_widget, file = paste0(file_name, ".html"))
     }
   } else {
@@ -171,7 +178,7 @@ if (zoom_plot == "yes") {
           dpi = 600
         )
       } else if (file_format_zoomed == "html") {
-        my_widget_zoomed <- ggplotly(gg_zoomed)
+        my_widget_zoomed <- ggplotly(gg_zoomed, tooltip = "text")
         saveWidget(my_widget_zoomed, file = paste0(file_name_zoomed, ".html"))
       }
     } else {
