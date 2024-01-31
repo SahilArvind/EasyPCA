@@ -62,21 +62,20 @@ gcc EasyPCA_lin.c -o EasyPCA_lin.exe
 
 This R code uses various libraries to load and manipulate data, create a PCA scatter plot, and optionally save the plot or a zoomed version based on user inputs. The key steps are:  <br />
 
- - Data Loading and Preparation  <br />
-   * Loads CSV files and combines them.  <br />
-   * Converts the "Population" column to a factor.  <br />
+ - Libraries & Data  <br />
+   * Load R libraries, read and join CSV files.  <br />
 
- - User Inputs  <br />
-   * Prompts the user for x-axis, y-axis, and plot title.  <br />
+ - Data Manipulation  <br />
+   * Convert, extract color and shape info.  <br />
 
- - Data Visualization:  <br />
-   * Creates a PCA scatter plot using ggplot2 with color and shape aesthetics based on population.  <br />
+ - User Input & Plot Creation:  <br />
+   * Prompt for x, y, and title; create and display scatter plot.  <br />
 
  - Save Plot  <br />
    * Optionally saves the plot based on user preference, specifying format, file name, and dimensions.  <br />
 
  - Zoomed Plot  <br />
-   * Optionally creates and saves a zoomed version of the plot, asking for limits and additional details.  <br />
+   * Optionally creates and saves a zoomed version of the plot, asking for limits and additional details. If requested, save the zoomed plot. <br />
 
  - Script Termination  <br />
    * Exits the script if the user chooses not to create a zoomed plot or exits at any point.  <br />
