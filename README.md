@@ -72,10 +72,10 @@ This R code uses various libraries to load and manipulate data, create a PCA sca
    * Prompt for x, y, and title; create and display scatter plot.  <br />
 
  - Save Plot  <br />
-   * Optionally saves the plot based on user preference, specifying format, file name, and dimensions.  <br />
+   * Optionally saves the plot based on user preference, specifying format (pdf/png/html), file name, and dimensions.  <br />
 
  - Zoomed Plot  <br />
-   * Optionally creates and saves a zoomed version of the plot, asking for limits and additional details. If requested, save the zoomed plot. <br />
+   * Optionally creates and saves a zoomed version of the plot, asking for X and Y axes limits and additional details. If requested, save the zoomed plot. <br />
 
  - Script Termination  <br />
    * Exits the script if the user chooses not to create a zoomed plot or exits at any point.  <br />
