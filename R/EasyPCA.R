@@ -39,10 +39,10 @@ list_shape <- data_combined %>%
 head(list_colour) 
 
 # User input for x-axis
-x_axis <- readline(prompt = "Enter the x-axis variable (e.g., PC1, PC2): ")
+x_axis <- readline(prompt = "Enter the x-axis variable: ")
 
 # User input for y-axis
-y_axis <- readline(prompt = "Enter the y-axis variable (e.g., PC1, PC2): ")
+y_axis <- readline(prompt = "Enter the y-axis variable: ")
 
 # User input for plot title
 plot_title <- readline(prompt = "Enter the title for the PCA plot: ")
@@ -69,7 +69,7 @@ gg <- ggplot(data = data_combined,
 print(gg)
 
 # Ask the user if they want to save the plot
-save_plot <- tolower(readline(prompt = "Do you want to save the plot? (Yes/No): "))
+save_plot <- tolower(readline(prompt = "Do you want to save the plot?: "))
 
 # Variables to store information for saving the plot
 file_format <- NULL
@@ -80,13 +80,13 @@ height <- NULL
 
 if (save_plot == "yes") {
   # Ask for the file format (pdf/png/html)
-  file_format <- tolower(readline(prompt = "Enter the file format (pdf/png/html): "))
+  file_format <- tolower(readline(prompt = "Enter the file format: "))
 
   # Ask for the filename
-  file_name <- readline(prompt = "Enter the file name (without extension): ")
+  file_name <- readline(prompt = "Enter the file name: ")
 
   # Ask for units, width, and height
-  units <- readline(prompt = "Enter the units (e.g., in, cm): ")
+  units <- readline(prompt = "Enter the units: ")
   width <- as.numeric(readline(prompt = "Enter the width: "))
   height <- as.numeric(readline(prompt = "Enter the height: "))
 
@@ -121,12 +121,12 @@ if (!is.null(file_format) && save_plot == "yes") {
 }
 
 # Ask if the user wants a zoomed plot
-zoom_plot <- tolower(readline(prompt = "Do you want to create a zoomed plot? (Yes/No): "))
+zoom_plot <- tolower(readline(prompt = "Do you want to create a zoomed plot?: "))
 
 if (zoom_plot == "yes") {
   # Ask for Y and X limits
-  ylim_input <- readline(prompt = "Enter Y-axis limits (e.g., 0, 10): ")
-  xlim_input <- readline(prompt = "Enter X-axis limits (e.g., -2, 2): ")
+  ylim_input <- readline(prompt = "Enter Y-axis limits: ")
+  xlim_input <- readline(prompt = "Enter X-axis limits: ")
 
   # Convert input to numeric, handling potential errors
   ylim <- suppressWarnings(as.numeric(strsplit(ylim_input, ",")[[1]]))
@@ -146,17 +146,17 @@ if (zoom_plot == "yes") {
   print(gg_zoomed)
 
   # Ask if the user wants to save the zoomed plot
-  save_zoomed_plot <- tolower(readline(prompt = "Do you want to save the zoomed plot? (Yes/No): "))
+  save_zoomed_plot <- tolower(readline(prompt = "Do you want to save the zoomed plot?: "))
 
   if (save_zoomed_plot == "yes") {
     # Ask for the file format (pdf/png/html)
-    file_format_zoomed <- tolower(readline(prompt = "Enter the file format (pdf/png/html): "))
+    file_format_zoomed <- tolower(readline(prompt = "Enter the file format: "))
 
     # Ask for the filename
-    file_name_zoomed <- readline(prompt = "Enter the file name for the zoomed plot (without extension): ")
+    file_name_zoomed <- readline(prompt = "Enter the file name for the zoomed plot: ")
 
     # Ask for units, width, and height for the zoomed plot
-    units_zoomed <- readline(prompt = "Enter the units for the zoomed plot (e.g., in, cm): ")
+    units_zoomed <- readline(prompt = "Enter the units for the zoomed plot: ")
     width_zoomed <- as.numeric(readline(prompt = "Enter the width for the zoomed plot: "))
     height_zoomed <- as.numeric(readline(prompt = "Enter the height for the zoomed plot: "))
 
